@@ -35,6 +35,11 @@ valet secure
 open https://web.shamshui.`valet tld`
 ```
 
+## Import racing days
+```
+php artisan import:days resources/data/2020-ch-racing-days.tsv
+```
+
 ## Copyright
 
 &copy; 2020 [Horace Ho](https://horaceho.com)
