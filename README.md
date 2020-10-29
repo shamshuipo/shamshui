@@ -1,10 +1,10 @@
-## About ShamShui
+## About ShamShui・心水
 
 Built for hobbyists to share tips
 
 ## Installation
 ```bash
-git clone git@github.com:horaceho/shamshui.git shamshui
+git clone git@github.com:shamshuipo/shamshui.git shamshui
 
 cd shamshui
 cp .env.example .env
@@ -42,4 +42,8 @@ php artisan import:days resources/data/2020-ch-racing-days.tsv
 
 ## Copyright
 
-&copy; 2020 [Horace Ho](https://horaceho.com)
+&copy; 2020 [Horace Ho](https://github.com/horaceho)
+
+## License
+
+Under the [MIT license](https://opensource.org/licenses/MIT)
