@@ -39,7 +39,10 @@ open https://web.shamshui.`valet tld`
 ```
 php artisan import:days resources/data/2020-ch-racing-days.tsv
 ```
-
+## Import results of a racing day
+```
+php artisan import:results
+```
 ## Copyright
 
 &copy; 2020 [Horace Ho](https://github.com/horaceho)

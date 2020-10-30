@@ -13,12 +13,21 @@ class Import extends Model
         'type',
         'code',
         'name',
+        'html',
+        'data',
+        'meta',
         'info',
         'state',
     ];
 
     protected $casts = [
+        'data' => 'json',
         'meta' => 'json',
         'info' => 'json',
     ];
+
+    public function importable()
+    {
+        return $this->morphTo();
+    }
 }
