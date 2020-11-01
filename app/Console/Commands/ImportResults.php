@@ -49,9 +49,15 @@ class ImportResults extends Command
                 ]);
             })->orderBy('code')->first();
 
+            if (empty($day)) { // then re-download the latest racing day
+                $day = Day::whereDate(
+                    'date', '<=', now(),
+                )->orderBy('code', 'DESC')->first();
+            }
+
             if ($day) {
                 $this->info("Import {$day->code} {$type}");
-                optional($day)->import($type);
+                $day->import($type);
             } else {
                 $this->info("Import nothing");
             }

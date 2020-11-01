@@ -55,12 +55,10 @@ class Day extends Model
             'code' => $this->code,
         ]);
 
-        if (empty($import->html)) {
-            $html = HkjcService::getHtml($this->code, $type);
-            if (Str::contains($html, 'racing')) {
-                $import->html = $html;
-                $import->save();
-            }
+        $html = HkjcService::getHtml($this->code, $type);
+        if (Str::contains($html, 'racing')) {
+            $import->html = $html;
+            $import->save();
         }
 
         return $import;
