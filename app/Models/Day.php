@@ -63,4 +63,15 @@ class Day extends Model
 
         return $import;
     }
+
+    public function results()
+    {
+        $day = $this;
+        $import = $day->imports()->where('type', 'results.all')->first();
+
+
+        $results = $import->html;
+
+        return $results;
+    }
 }

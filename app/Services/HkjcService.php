@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use DiDom\Document;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -33,5 +34,10 @@ class HkjcService
             ->bodyHtml();
 
         return $html;
+    }
+
+    public static function getHtmlResults($html)
+    {
+        $result = optional($html->find('.race_result'))[0]->html();
     }
 }
